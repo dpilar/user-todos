@@ -1,8 +1,6 @@
 plugins {
-    id 'java'
     id 'groovy'
     id 'org.springframework.boot' version '3.5.5'
-    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.vendavo.eps'
@@ -19,14 +17,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.5.5'
     testImplementation 'org.spockframework:spock-core:2.4-M6-groovy-4.0'
     testImplementation 'org.apache.groovy:groovy:4.0.28'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-core:5.19.0'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
 }
