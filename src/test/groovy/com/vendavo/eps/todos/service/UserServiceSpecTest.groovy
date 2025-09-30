@@ -4,7 +4,7 @@ import com.vendavo.eps.todos.client.IExternalUserClient
 import com.vendavo.eps.todos.domain.User
 import spock.lang.Specification
 
-class UserServiceTest extends Specification {
+class UserServiceSpecTest extends Specification {
 
     private UserService service
     private IExternalUserClient client
