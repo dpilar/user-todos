@@ -37,6 +37,9 @@
                     <target>${java.target}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <debug>true</debug>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
