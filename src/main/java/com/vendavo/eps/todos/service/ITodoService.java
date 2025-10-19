@@ -7,4 +7,6 @@ import java.util.List;
 public interface ITodoService {
 
     List<Todo> getTodos();
+
+    List<Todo> getTodosByUserName(String userName);
 }

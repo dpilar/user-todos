@@ -22,4 +22,9 @@ public class TodoController {
     public List<Todo> getTodos() {
         return todoService.getTodos();
     }
+
+    @GetMapping(value = "/filter")
+    public List<Todo> getTodosByUserName(@RequestParam("username") String userName) {
+        return todoService.getTodosByUserName(userName);
+    }
 }
