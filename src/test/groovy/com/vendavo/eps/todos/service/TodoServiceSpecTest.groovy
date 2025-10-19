@@ -27,7 +27,7 @@ class TodoServiceSpecTest extends Specification {
         1 * client.getTodos() >> todos
     }
 
-    def "test getTodosByUserName" () {
+    def "test getTodosByUserName"() {
         given:
         def users = [
                 Stub(User) { getId() >> 1; getUsername() >> "Alice" },
@@ -50,9 +50,9 @@ class TodoServiceSpecTest extends Specification {
         1 * client.getTodos() >> todos
 
         where:
-        userName || expectedIds
-        "Alice"  || [1, 3]
-        "Bob"    || [2]
-        "Charlie"|| []
+        userName  || expectedIds
+        "Alice"   || [1, 3]
+        "Bob"     || [2]
+        "Charlie" || []
     }
 }
