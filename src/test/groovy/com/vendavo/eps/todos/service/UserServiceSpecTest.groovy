@@ -28,7 +28,7 @@ class UserServiceSpecTest extends Specification {
 
     def "test getUser"() {
         given:
-        def users = [Stub(User) { getId() >> 1 }, Stub(User) { getId() >> 2 }, Stub(User) { getId() >> 3 }]
+        def users = [Stub(User) { getId() >> 1 }, Stub(User) { getId() >> 2 }, Stub(User) { getId() >> 3 }, Stub(User) { getId() >> 4 }]
 
         when:
         def result = service.getUser(userId)
@@ -41,8 +41,8 @@ class UserServiceSpecTest extends Specification {
         where:
         userId || resultId
         1L     || 1L
-        2L     || 1L
-        3L     || 1L
-        4L     || 1L
+        2L     || 2L
+        3L     || 3L
+        4L     || 4L
     }
 }

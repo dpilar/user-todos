@@ -22,6 +22,9 @@ public class UserService implements IUserService {
 
     @Override
     public User getUser(long id) {
-        return getUsers().get(0);
+        return getUsers().stream()
+                .filter(user -> user.getId() == id)
+                .findFirst()
+                .orElse(null);
     }
 }

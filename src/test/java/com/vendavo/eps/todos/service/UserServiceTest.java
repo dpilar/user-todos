@@ -29,7 +29,9 @@ public class UserServiceTest {
         when(user2.getId()).thenReturn(2L);
         User user3 = mock(User.class);
         when(user3.getId()).thenReturn(3L);
-        users = List.of(user1, user2, user3);
+        User user4 = mock(User.class);
+        when(user4.getId()).thenReturn(4L);
+        users = List.of(user1, user2, user3, user4);
         when(client.getUsers()).thenReturn(users);
     }
 
@@ -61,7 +63,7 @@ public class UserServiceTest {
 
         // then
         assertNotNull(result);
-        assertEquals(1L, result.getId());
+        assertEquals(2L, result.getId());
         verify(client).getUsers();
     }
 
@@ -72,7 +74,7 @@ public class UserServiceTest {
 
         // then
         assertNotNull(result);
-        assertEquals(1L, result.getId());
+        assertEquals(3L, result.getId());
         verify(client).getUsers();
     }
 
@@ -83,7 +85,7 @@ public class UserServiceTest {
 
         // then
         assertNotNull(result);
-        assertEquals(1L, result.getId());
+        assertEquals(4L, result.getId());
         verify(client).getUsers();
     }
 }
