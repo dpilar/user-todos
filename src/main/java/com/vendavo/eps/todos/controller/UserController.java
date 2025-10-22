@@ -12,7 +12,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value = "/users", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/ven-users", produces = APPLICATION_JSON_VALUE)
 public class UserController {
 
     private final IUserService userService;

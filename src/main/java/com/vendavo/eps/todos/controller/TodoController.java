@@ -14,7 +14,7 @@ public class TodoController {
 
     private ITodoService todoService;
 
-    @GetMapping(value = "/todos", produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/ven-todos", produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE)
     public List<Todo> getTodos() {
         return todoService.getTodos();
     }
