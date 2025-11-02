@@ -9,7 +9,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value = "todos", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/ven-todos", produces = APPLICATION_JSON_VALUE)
 public class TodoController {
 
     private final ITodoService todoService;
