@@ -2,7 +2,7 @@ package com.vendavo.eps.todos.service;
 
 import com.vendavo.eps.todos.client.IExternalUserClient;
 import com.vendavo.eps.todos.domain.User;
-import com.vendavo.eps.todos.exeption.UserNotFoundException;
+import com.vendavo.eps.todos.exception.UserNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
