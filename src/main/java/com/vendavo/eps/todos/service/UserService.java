@@ -2,6 +2,7 @@ package com.vendavo.eps.todos.service;
 
 import com.vendavo.eps.todos.client.IExternalUserClient;
 import com.vendavo.eps.todos.domain.User;
+import com.vendavo.eps.todos.exeption.UserNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,6 +26,6 @@ public class UserService implements IUserService {
         return getUsers().stream()
                 .filter(user -> user.getId() == id)
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(() -> new UserNotFoundException("User with id " + id + " not found"));
     }
 }
