@@ -7,6 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class JsonPlaceholderClient implements IExternalUserClient {
@@ -29,6 +30,6 @@ public class JsonPlaceholderClient implements IExternalUserClient {
 
     private <T> List<T> getForList(String url, Class<T[]> clazz) {
         T[] array = restTemplate.getForObject(url, clazz);
-        return array == null ? List.of() : Arrays.asList(array);
+        return array == null ? List.of() : Arrays.stream(array).collect(Collectors.toSet()).stream().toList();
     }
 }
